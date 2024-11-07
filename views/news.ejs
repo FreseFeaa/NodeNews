@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости - <%= category %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="header">
+        <h2><%= newsItems.length %> последняя(-ие) новость(и) в категории <%= category %></h2>
+
+</header>
+
+    <div class="cont">
+    <dl>
+        <% newsItems.forEach(item => { %>
+            <dt><a href="<%= item.link %>"><%= item.title %></a></dt>
+            <dd><%= item.description %></dd>
+        <% }) %>
+    </dl>
+    <p><a href="http://localhost:3000">Ссылка на Главную</a></p>
+</div>
+</body>
+</html>
